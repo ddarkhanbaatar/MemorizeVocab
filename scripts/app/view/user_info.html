@@ -1,0 +1,312 @@
+<section class="content-header">
+    <h1>
+        Manage Fields
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-bars"></i>Settings</a></li>
+        <li class="active">Manage Fiellds</li>
+    </ol>
+
+</section>
+<section class="content">
+    <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script>
+        $(function () {
+            // Replace the <textarea id="editor1"> with a CKEditor
+            // instance, using default configuration.
+
+            //bootstrap WYSIHTML5 - text editor
+            $('.textarea').wysihtml5()
+        })
+    </script>
+    <div class="box">
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box box-info">
+                        <div class="box-header">
+                            <h4>Field type list</h4>
+                        </div>
+                        <div class="box-body">
+                            <table class="table">
+                                <tr style="background-color:#fdddab">
+                                    <td><a>General field</a></td>
+                                    <td><button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button><button
+                                            class="btn btn-default btn-sm"><i class="fa fa-navicon text-blue"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-9"><a>Australian slangs</a></td>
+                                    <td class="col-md-3">
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-navicon text-blue"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a>Academic field</a></td>
+                                    <td><button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button><button
+                                            class="btn btn-default btn-sm"><i class="fa fa-navicon text-blue"></i></button></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td><a>IT definitions</a></td>
+                                    <td><button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-navicon text-blue"></i></button></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="box-fooder" style="padding:10px">
+                            <input type="button" class="btn btn-primary btn-flat" value="Create Field Type" data-toggle="modal"
+                                data-target="#modal-field" />
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-8">
+                    <div class="box box-warning" style=" height: 325px; padding-left: 10px;background-color:#f8f9fb">
+                        <div class="box-header">
+                            <h4>Flashcard list of <b>(General field)</b> </h4>
+                        </div>
+                        <div class="box-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Flashcard name</th>
+                                    <th>Date</th>
+                                    <th>State</th>
+                                    <th>Action</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>English front</td>
+                                    <td>2018.09.05</td>
+                                    <td><span class="label label-success">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Mongolian front</td>
+                                    <td>2018.08.30</td>
+                                    <td><span class="label label-warning">Inactive</span></td>
+                                    <td>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sentence first</td>
+                                    <td>2018.09.30</td>
+                                    <td><span class="label label-success">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="box-fooder" style="padding:10px">
+                            <input type="button" class="btn btn-warning btn-flat" value="Create new flash card"
+                                data-toggle="modal" data-target="#modal-card" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal-field" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Field Type</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-4 control-label">Field Type Name</label>
+
+                                <div class="col-sm-8">
+                                    <input type="email" value="General Field" class="form-control" id="inputEmail3" placeholder="Type Name">
+                                </div>
+                            </div>                            
+                            <div class="form-group">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Field name</th>
+                                        <th>Length</th>
+                                        <th>Is Mandatory</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Vocabulary</td>
+                                        <td>50</td>
+                                        <td><span class="label label-success">Yes</span></td>
+                                        <td>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>EnglishDescription</td>
+                                        <td>150</td>
+                                        <td><span class="label label-warning">No</span></td>
+                                        <td>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>MongolianDescription</td>
+                                        <td>150</td>
+                                        <td><span class="label label-success">Yes</span></td>
+                                        <td>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Example</td>
+                                        <td>250</td>
+                                        <td><span class="label label-warning">No</span></td>
+                                        <td>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Synonym</td>
+                                        <td>100</td>
+                                        <td><span class="label label-warning">No</span></td>
+                                        <td>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                            <td>6</td>
+                                            <td>WordType</td>
+                                            <td>10</td>
+                                            <td><span class="label label-success">Yes</span></td>
+                                            <td>
+                                                <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                                <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left btn-flat" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btn-flat">Save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+    <div class="modal fade" id="modal-card" style="display: none;">
+        <div class="modal-dialog" style="width: 800px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Flashcard</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Field Type Name</label>
+
+                                <div class="col-sm-9">
+                                    <input type="email" value="General Field" class="form-control" id="inputEmail3"
+                                        disabled="disabled" placeholder="Type Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-3 control-label">Flashcard name</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" value="Mongolian Front" class="form-control" id="inputPassword3"
+                                        placeholder="Number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-3 control-label">Is Active</label>
+
+                                <div class="col-sm-9">
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="box">
+                                                <div class="box-header">
+                                                    <h3 class="box-title">Question design </h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body pad">
+                                                    <form>
+                                                        <textarea class="textarea" placeholder="Place some text here"
+                                                            style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                                                        
+                                                        </textarea>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="box">
+                                                <div class="box-header">
+                                                    <h3 class="box-title">Answer design </h3>
+
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body pad">
+                                                    <form>
+                                                        <textarea class="textarea" placeholder="Place some text here"
+                                                            style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left btn-flat" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btn-flat">Save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</section>

@@ -1,0 +1,79 @@
+<section class="content-header">
+    <h1>
+        Manage Categories
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa  fa-cubes"></i>Settings</a></li>
+        <li class="active">Manage Categories</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box" ng-init="fetchCategory()">
+
+        <!-- Add new category modal -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="crudmodal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form method="post" ng-submit="submitForm()">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Category forum</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Category Name</label>
+                                <input type="text" name="name" ng-model="name" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Easy Interval</label>
+                                <input type="text" name="easyinterval" ng-model="easyinterval" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" name="uu_id" value="{{uu_id}}" />
+                            <input type="submit" name="submit" id="submit" class="btn btn-info" value="Save" />
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-success">
+                        <div class="box-header">
+                            <h4>Category list</h4>
+                        </div>
+                        <div class="box-body">
+                            <table class="table table-bordered" datatable="ng">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Category Name</th>
+                                    <th>Created Date</th>
+                                    <th>Easy Interval</th>
+                                    <th>Action</th>
+                                </tr>
+                                <tr ng-repeat="cat in categoryList">
+                                    <td>{{$index+1}}</td>
+                                    <td>{{cat.name}}</td>
+                                    <td>{{cat.createdate}}</td>
+                                    <td><span class="label label-info">{{cat.easyinterval}}</span></td>
+                                    <td>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-edit text-green"></i></button>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-trash-o text-red"></i></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="box-fooder" style="padding:10px">
+                            <input type="button" class="btn btn-primary btn-sm" ng-click="addData()" value="Add New Category" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
